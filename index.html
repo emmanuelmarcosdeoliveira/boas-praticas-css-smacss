@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução ao SMACSS</title>
+  <link rel="stylesheet" href="smacss/base.css">
+  <link rel="stylesheet" href="smacss/layout.css">
+  <link rel="stylesheet" href="smacss/module.css">
+  <link rel="stylesheet" href="smacss/tema-a.css">
+  <link rel="stylesheet" href="smacss/tema-b.css">
+</head>
+
+<body class="tema-a">
+  <div id="header">
+    <div class="container">
+      <h1 class="title">Meu Site</h1>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Produtos</a>
+        </li>
+        <li>
+          <a href="#">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="accordion">
+      <header class="accordion-header">
+        Nome do Acordion
+      </header>
+      <p class="accordion-content">
+        conteúdo
+      </p>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="mensagem mensagem-is-error">
+        <h5 class="mensagem-titulo">Atenção</h5>
+        <p class="mensagem-conteudo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla vero saepe mollitia modi. Consequatur, molestiae.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+      const accordions = document.querySelectorAll(".accordion-header");
+    for (let i = 0; i < accordions.length; i++) {
+      accordions[i].addEventListener("click", function(evento) {
+        evento.target.parentNode.classList.toggle('is-open');
+      });
+    }
+     </script>
+</body>
+</html>
